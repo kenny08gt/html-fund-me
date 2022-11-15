@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fund Me Hardhat</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background: #00bbf9;
+                font-family: "Robot", sans-serif;
+                color: #efefef;
+                padding: 100px;
+                text-align: center;
+            }
+
+            button {
+                background: #fee440;
+                padding: 15px 25px;
+                border-radius: 10px;
+                color: #222;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                margin-right: 20px;
+                height: max-content;
+            }
+            button:hover {
+                background: #f15bb5;
+                color: #fff;
+            }
+            input {
+                padding: 15px 25px;
+                border-radius: 10px;
+                border: none;
+                margin-top: 10px;
+            }
+            .fund-box {
+                border: 1px solid #efefef;
+                border-radius: 10px;
+                width: max-content;
+                padding: 20px;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            .input-group {
+                display: flex;
+                flex-flow: column;
+            }
+            .input-group label {
+                font-size: 12px;
+            }
+            #fundBtn {
+                margin-left: 20px;
+            }
+            .main-wrap {
+                display: flex;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+            }
+            .status {
+                border: 1px solid #efefef;
+                border-radius: 10px;
+                width: max-content;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+                margin-right: 20px;
+                flex-flow: column;
+            }
+            .row {
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+                justify-content: space-between;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Welcome to FundMe!</h2>
+        <br />
+        <br />
+        <div class="main-wrap">
+            <div class="status">
+                <div class="row">
+                    <button id="connectBtn">Connect</button>
+                    <div>
+                        Status:
+                        <span id="status" style="font-weight: bold"
+                            >Disconnected</span
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="getBalance">Get Balance</button>
+                    <div>Balance <span id="balance">--</span> ETH</div>
+                </div>
+            </div>
+
+            <div class="fund-box">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="amount">ETH amount</label>
+                        <input
+                            type="number"
+                            name="amount"
+                            id="amount"
+                            min="0"
+                            placeholder="0.1"
+                        />
+                    </div>
+                    <button id="fundBtn">Fund</button>
+                </div>
+            </div>
+
+            <div class="fund-box" style="margin-left: 20px">
+                <div class="input-group" style="margin-bottom: 15px">
+                    <label for="withdrawBtn"
+                        >Withdraw the funds. (Only the owner)</label
+                    >
+                </div>
+                <button id="withdrawBtn" style="margin-right: 0">
+                    Withdraw
+                </button>
+            </div>
+        </div>
+        <iframe
+            height="400px"
+            src="https://embed.lottiefiles.com/animation/64184"
+            style="border: none"
+        ></iframe>
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>
